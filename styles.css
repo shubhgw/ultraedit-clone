@@ -121,11 +121,12 @@ header span, a {
 }
 
 .heading {
-    font-size: 52px;
+    font-size: clamp(30px, 4vw, 60px);
     display: flex;
     align-items: center;
     column-gap: 16px;
     font-weight: bold;
+    text-wrap: wrap;
 
 }
 
@@ -211,6 +212,57 @@ header span, a {
     font-size: 9px;
 }
 
-footer{
+footer {
     margin: 100px 0px 10px 20px;
+}
+
+
+@media screen and (max-width:1233px) {
+    .pages, nav, .statement {
+        flex-direction: column;
+        width: 300px;
+        gap: 10px;
+        text-align: center;
+    }
+
+    header p , .sub-heading{
+        width: 400px;
+        text-align: center;
+    }
+
+    header,.nav-div{
+        /* z-index: 0; */
+        position: absolute;
+        left: 0px;
+        right: 0px;
+    }
+
+    header{
+        z-index: 5;
+    }
+
+    .nav-div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    main{
+        padding-top: 600px;
+    }
+
+    .heading{
+        padding: 0px 20px;
+    }
+
+    .sub-heading,.mac-linux{
+        width: 250px;
+    }
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
